@@ -1,0 +1,10 @@
+.array-container {
+  width: 80%;
+  display: flex;
+  background: red;
+}
+
+.array-bar {
+  flex: 1;
+  background: black;
+}
