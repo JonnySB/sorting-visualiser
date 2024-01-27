@@ -1,0 +1,8 @@
+.controls-container {
+  display: flex;
+  height: 13vh;
+  width: 90%;
+  margin: auto;
+  background: #060114;
+  border-radius: 15px;
+}

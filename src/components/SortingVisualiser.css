@@ -1,10 +1,10 @@
 .array-container {
-  width: 80%;
   display: flex;
-  background: red;
-}
-
-.array-bar {
-  flex: 1;
-  background: black;
+  padding: 15px;
+  height: 80vh;
+  width: 90%;
+  margin: auto;
+  align-items: flex-end;
+  margin-top: 15px;
+  background: #0d1e25;
 }
