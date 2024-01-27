@@ -1,9 +1,0 @@
-.graph-container {
-  background: red;
-  height: 850px; /* Set the desired height of the container */
-  width: 95%; /* Set the desired width of the container */
-}
-
-.graph {
-  display: flex;
-}
