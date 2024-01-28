@@ -5,7 +5,7 @@ const ArrayBar = (props) => {
   return (
     <div
       className="array-bar"
-      key={props.idx}
+      key={props.index}
       style={{ height: `${props.height}%` }}
     ></div>
   );
