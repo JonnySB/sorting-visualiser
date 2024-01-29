@@ -1,3 +1,7 @@
+// for each potential swap, function creates three identical
+// elements (a triplet - [[i, j] shouldSwap]). This allows the setTimeout functionality to work
+// correctly below. I.e. 1st element used to colour target elements, second to
+// perform the swap, and the 3rd element to clean up the colours.
 const createBubbleSortAnimations = (array) => {
   const animationsArray = [];
   let arrayLength = array.length;

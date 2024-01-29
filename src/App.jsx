@@ -5,7 +5,7 @@ import SortingControls from "./components/SortingControls";
 
 function App() {
   const [arraySize, setArraySize] = useState(30);
-  const [animationSpeedMS, setAnimationSpeedMS] = useState(50);
+  const [animationSpeedMS, setAnimationSpeedMS] = useState(150);
   const [resetArrayTrigger, setResetArrayTrigger] = useState(false);
   const [bubbleSortTrigger, setBubbleSortTrigger] = useState(false);
 
@@ -17,6 +17,7 @@ function App() {
         resetArrayTrigger={resetArrayTrigger}
         bubbleSortTrigger={bubbleSortTrigger}
       />
+
       <SortingControls
         // Set Array Size
         arraySizeState={{ arraySize: arraySize, setArraySize: setArraySize }}
