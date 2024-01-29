@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import ArrayBar from "./ArrayBar";
+import ArrayBar from "../ArrayBar/ArrayBar";
 import "./SortingVisualiser.css";
-import createBubbleSortAnimations from "../sortingAlgorithms/createBubbleSortAnimations";
-import playBubbleSortAnimations from "../sortingAlgorithms/playBubbleSortAnimations";
+import createBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/createBubbleSortAnimations";
+import playBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/playBubbleSortAnimations";
 
 const SortingVisualiser = (props) => {
   const hasPageBeenRendered = useRef({ bubbleSortEffect: false });

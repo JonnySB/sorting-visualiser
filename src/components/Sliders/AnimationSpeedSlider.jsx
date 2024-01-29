@@ -13,16 +13,15 @@ const AnimationSpeedSlider = (props) => {
         Set Animation Speed
         <br />
         <input
+          className="reverse"
           type="range"
           name="animation-speed"
           id="animation-speed"
-          min="5"
+          min="1"
           max="300"
           value={props.animationSpeedMSState.animationSpeedMS}
           onChange={handleChangeAnimationSpeed}
         />
-        <br />
-        {props.animationSpeedMSState.animationSpeedMS} ms
       </label>
     </div>
   );

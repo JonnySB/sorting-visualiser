@@ -1,5 +1,5 @@
-import changeBarColours from "../helperMethods/changeBarColours";
-import swapBarHeights from "../helperMethods/swapBarHeights";
+import changeBarColours from "../../helperMethods/changeBarColours";
+import swapBarHeights from "../../helperMethods/swapBarHeights";
 
 const playBubbleSortAnimations = (
   annimationsArray,

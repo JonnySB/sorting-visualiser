@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
-import SortingVisualiser from "./components/SortingVisualiser";
-import SortingControls from "./components/SortingControls";
+import SortingVisualiser from "./components/SortingVisualiser/SortingVisualiser";
+import SortingControls from "./components/SortingControls/SortingControls";
 
 function App() {
   const [arraySize, setArraySize] = useState(30);
   const [animationSpeedMS, setAnimationSpeedMS] = useState(150);
   const [resetArrayTrigger, setResetArrayTrigger] = useState(false);
+  const [cancelAnimationTrigger, setCancelAnimationTrigger] = useState(false);
   const [bubbleSortTrigger, setBubbleSortTrigger] = useState(false);
 
   return (
@@ -31,6 +32,13 @@ function App() {
           buttonName: "Reset Array",
           state: resetArrayTrigger,
           setState: setResetArrayTrigger,
+        }}
+        // Cancel animation
+        cancelAnimationButtonNameAndState={{
+          buttonName: "Cancel Animation",
+          state: cancelAnimationTrigger,
+          setState: setCancelAnimationTrigger,
+          className: "cancel-animation",
         }}
         // Trigger Bubble Sort Button
         bubbleSortButtonNameAndState={{

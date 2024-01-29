@@ -1,0 +1,30 @@
+.controls-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.animation-controls-container {
+  display: flex;
+  flex-direction: column;
+  height: 13vh;
+  background: #060114;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.header {
+  color: #e6d6b1;
+  font-size: 1.5vh;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.spacer {
+  width: 20%;
+}

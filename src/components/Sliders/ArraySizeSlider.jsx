@@ -21,8 +21,6 @@ const ArraySizeSlider = (props) => {
           value={props.arraySizeState.arraySize}
           onChange={handleChangeArraySize}
         />
-        <br />
-        {props.arraySizeState.arraySize} Elements
       </label>
     </div>
   );
