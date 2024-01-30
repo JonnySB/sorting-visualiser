@@ -16,8 +16,8 @@ const SortingVisualiser = (props) => {
   // app colour pallet
   const colours = {
     BASE_COLOR_HEX: "#f5a97f",
-    SWAP_COLOR_HEX: "#a6da95",
-    NO_SWAP_COLOR_HEX: "#ed8796",
+    SWAP_COLOR_HEX: "#ed8796",
+    NO_SWAP_COLOR_HEX: "#a6da95",
   };
 
   // Generate an array of length arrayLength:
