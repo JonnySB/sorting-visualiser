@@ -13,6 +13,7 @@ const ArraySizeSlider = (props) => {
         {" "}
         Set Array Size <br />
         <input
+          className="slider"
           type="range"
           name="array-size"
           id="array-size"

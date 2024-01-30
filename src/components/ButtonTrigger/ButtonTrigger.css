@@ -9,6 +9,11 @@
   font-weight: 700;
   background: #94e2d5;
   color: #24273a;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f38ba8;
 }
 
 .button-container {

@@ -13,7 +13,7 @@ const AnimationSpeedSlider = (props) => {
         Set Animation Speed
         <br />
         <input
-          className="reverse"
+          className="reverse slider"
           type="range"
           name="animation-speed"
           id="animation-speed"

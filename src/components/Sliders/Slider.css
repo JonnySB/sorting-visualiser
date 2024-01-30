@@ -14,3 +14,7 @@
 .label {
   color: #24273a;
 }
+
+.slider {
+  cursor: pointer;
+}

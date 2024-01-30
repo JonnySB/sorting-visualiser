@@ -52,7 +52,6 @@ const SortingVisualiser = (props) => {
   // Trigger cancelling an animation
   useEffect(() => {
     if (hasPageBeenRendered.current.cancelAnimation) {
-      // cancel timeouts
       timeoutIds.forEach((timeoutId) => {
         clearTimeout(timeoutId);
       });
