@@ -4,7 +4,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3vh;
   font-weight: 700;
-  color: #cad3f5;
+  color: white;
 }
 
 .App-logo {
@@ -19,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #24273a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .top-spacer {
-  height: 15px;
+  height: 10px;
 }
 
 @keyframes App-logo-spin {

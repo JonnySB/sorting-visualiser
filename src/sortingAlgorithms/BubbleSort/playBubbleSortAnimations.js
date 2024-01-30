@@ -7,6 +7,7 @@ const playBubbleSortAnimations = (
   animationSpeedMS,
   colours,
 ) => {
+  const timeoutIds = [];
   for (let i = 0; i < annimationsArray.length; i++) {
     const [[i1, i2], swap] = annimationsArray[i];
     const barOneStyle = arrayBars[i1].style;
@@ -20,31 +21,44 @@ const playBubbleSortAnimations = (
     if (isColourChange) {
       if (swap) {
         // IF-SWAPPING - highlight in SWAP_COLOR_HEX
-        setTimeout(() => {
-          changeBarColours(barOneStyle, barTwoStyle, colours.SWAP_COLOR_HEX);
-        }, i * animationSpeedMS);
+        timeoutIds.push(
+          setTimeout(() => {
+            changeBarColours(barOneStyle, barTwoStyle, colours.SWAP_COLOR_HEX);
+          }, i * animationSpeedMS),
+        );
       } else {
         // IF-NOT-SWAPPING - highlight in NO_SWAP_COLOR_HEX
-        setTimeout(() => {
-          changeBarColours(barOneStyle, barTwoStyle, colours.NO_SWAP_COLOR_HEX);
-        }, i * animationSpeedMS);
+        timeoutIds.push(
+          setTimeout(() => {
+            changeBarColours(
+              barOneStyle,
+              barTwoStyle,
+              colours.NO_SWAP_COLOR_HEX,
+            );
+          }, i * animationSpeedMS),
+        );
       }
     } else if (isSwap) {
       if (swap) {
         // IF-SWAPPING - highlight in SWAP_COLOR_HEX and swap
-        setTimeout(() => {
-          swapBarHeights(barOneStyle, barTwoStyle);
-        }, i * animationSpeedMS);
+        timeoutIds.push(
+          setTimeout(() => {
+            swapBarHeights(barOneStyle, barTwoStyle);
+          }, i * animationSpeedMS),
+        );
       } else {
-        setTimeout(() => {}, i * animationSpeedMS);
+        timeoutIds.push(setTimeout(() => {}, i * animationSpeedMS));
       }
     } else {
       // POST-SWAP - clean up colours back to BASE_COLOR_HEX
-      setTimeout(() => {
-        changeBarColours(barOneStyle, barTwoStyle, colours.BASE_COLOR_HEX);
-      }, i * animationSpeedMS);
+      timeoutIds.push(
+        setTimeout(() => {
+          changeBarColours(barOneStyle, barTwoStyle, colours.BASE_COLOR_HEX);
+        }, i * animationSpeedMS),
+      );
     }
   }
+  return timeoutIds;
 };
 
 export default playBubbleSortAnimations;

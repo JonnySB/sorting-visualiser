@@ -1,14 +1,14 @@
 .button {
   display: block;
   width: 100%;
-  background: #e6d6b1;
   border: 0px;
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
   font-size: 1.3vh;
   font-weight: 700;
-  color: #060114;
+  background: #94e2d5;
+  color: #24273a;
 }
 
 .button-container {

@@ -18,6 +18,7 @@ function App() {
         animationSpeedMS={animationSpeedMS}
         resetArrayTrigger={resetArrayTrigger}
         bubbleSortTrigger={bubbleSortTrigger}
+        cancelAnimationTrigger={cancelAnimationTrigger}
       />
 
       <SortingControls

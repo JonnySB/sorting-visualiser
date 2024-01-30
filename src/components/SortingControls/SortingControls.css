@@ -14,13 +14,14 @@
   display: flex;
   flex-direction: column;
   height: 13vh;
+  width: 50%;
   background: #494d64;
   padding: 10px;
   border-radius: 14px;
 }
 
 .header {
-  color: #e6d6b1;
+  color: white;
   font-size: 1.5vh;
   margin-top: 0px;
   margin-bottom: 5px;

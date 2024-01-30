@@ -9,7 +9,7 @@ const AnimationSpeedSlider = (props) => {
 
   return (
     <div className="slider-container">
-      <label htmlFor="animation-speed">
+      <label htmlFor="animation-speed" className="label">
         Set Animation Speed
         <br />
         <input

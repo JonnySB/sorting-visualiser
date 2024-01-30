@@ -9,7 +9,7 @@ const ArraySizeSlider = (props) => {
 
   return (
     <div className="slider-container">
-      <label htmlFor="array-size">
+      <label htmlFor="array-size" className="label">
         {" "}
         Set Array Size <br />
         <input

@@ -4,8 +4,13 @@ import "./SortingVisualiser.css";
 import createBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/createBubbleSortAnimations";
 import playBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/playBubbleSortAnimations";
 
+const timeoutIds = [];
+
 const SortingVisualiser = (props) => {
-  const hasPageBeenRendered = useRef({ bubbleSortEffect: false });
+  const hasPageBeenRendered = useRef({
+    bubbleSortEffect: false,
+    cancelAnimation: false,
+  });
   const [array, setArray] = useState([]);
 
   // app colour pallet
@@ -29,11 +34,13 @@ const SortingVisualiser = (props) => {
   const triggerPlayBubbleSortAnimations = () => {
     const annimationsArray = createBubbleSortAnimations(array);
     const arrayBars = document.getElementsByClassName("array-bar");
-    playBubbleSortAnimations(
-      annimationsArray,
-      arrayBars,
-      props.animationSpeedMS,
-      colours,
+    timeoutIds.push(
+      ...playBubbleSortAnimations(
+        annimationsArray,
+        arrayBars,
+        props.animationSpeedMS,
+        colours,
+      ),
     );
   };
 
@@ -41,6 +48,22 @@ const SortingVisualiser = (props) => {
   useEffect(() => {
     resetArray();
   }, [props.resetArrayTrigger, props.arraySize]);
+
+  // Trigger cancelling an animation
+  useEffect(() => {
+    if (hasPageBeenRendered.current.cancelAnimation) {
+      // cancel timeouts
+      timeoutIds.forEach((timeoutId) => {
+        clearTimeout(timeoutId);
+      });
+      // reset colours
+      const arrayBars = document.getElementsByClassName("array-bar");
+      for (let i = 0; i < arrayBars.length; i++) {
+        arrayBars[i].style.backgroundColor = colours.BASE_COLOR_HEX;
+      }
+    }
+    hasPageBeenRendered.current.cancelAnimation = true;
+  }, [props.cancelAnimationTrigger]);
 
   // Trigger Bubble Sort:
   useEffect(() => {
