@@ -1,10 +1,11 @@
 .array-container {
   display: flex;
   padding: 15px;
-  height: 80vh;
+  height: 75vh;
   width: 90%;
   margin: auto;
   align-items: flex-end;
   margin-top: 15px;
-  background: #0d1e25;
+  background: #181926;
+  border-radius: 14px;
 }

@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="top-spacer"></div>
       <SortingVisualiser
         arraySize={arraySize}
         animationSpeedMS={animationSpeedMS}

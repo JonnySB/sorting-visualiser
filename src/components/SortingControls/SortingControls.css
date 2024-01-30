@@ -1,16 +1,22 @@
 .controls-container {
   display: flex;
+  padding: 15px;
+  height: 15vh;
   width: 90%;
   margin: auto;
+  align-items: flex-end;
+  margin-top: 15px;
+  background: #181926;
+  border-radius: 14px;
 }
 
 .animation-controls-container {
   display: flex;
   flex-direction: column;
   height: 13vh;
-  background: #060114;
+  background: #494d64;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 .header {
