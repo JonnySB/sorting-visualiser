@@ -32,7 +32,7 @@ const SortingControls = (props) => {
             buttonNameAndState={props.bubbleSortButtonNameAndState}
           />
           <ButtonTrigger
-            buttonNameAndState={props.bubbleSortButtonNameAndState}
+            buttonNameAndState={props.selectionSortButtonNameAndState}
           />
         </div>
         <div className="horizontal-container">
