@@ -2,6 +2,9 @@
 
 ![sorting-gif](/gifs/sorting-gif1.gif)
 
+Note, still under production - additional algorithms to be added: insertion
+sort, merge sort and quick sort.
+
 ## What is the Sorting Algorithm Visualiser?
 
 The Sorting Algorithm Visualiser aims to provide a visual representation of

@@ -35,14 +35,6 @@ const SortingControls = (props) => {
             buttonNameAndState={props.selectionSortButtonNameAndState}
           />
         </div>
-        <div className="horizontal-container">
-          <ButtonTrigger
-            buttonNameAndState={props.bubbleSortButtonNameAndState}
-          />
-          <ButtonTrigger
-            buttonNameAndState={props.bubbleSortButtonNameAndState}
-          />
-        </div>
       </div>
     </div>
   );
