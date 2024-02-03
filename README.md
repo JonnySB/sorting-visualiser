@@ -1,5 +1,7 @@
 # Sorting Algorithm Visualiser
 
+![sorting-gif](/gifs/sorting-gif1.gif)
+
 ## What is the Sorting Algorithm Visualiser?
 
 The Sorting Algorithm Visualiser aims to provide a visual representation of
@@ -32,5 +34,3 @@ In the project directory:
 
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-![sorting-gif](/gifs/sorting-gif1.gif)
