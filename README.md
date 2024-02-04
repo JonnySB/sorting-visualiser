@@ -1,6 +1,6 @@
 # Sorting Algorithm Visualiser
 
-![sorting-gif](/gifs/sorting-gif1.gif)
+![sorting-gif](/gifs/sorting-gif.gif)
 
 Note, still under production - additional algorithms to be added: insertion
 sort, merge sort and quick sort.
@@ -14,7 +14,7 @@ array.
 ## Sorting Algorithm Mechanics - how does it work?:
 
 When a particular sorting method is selected, the associated algorithm is run
-behind the scenes and used to build an animations array. The animations array
+behind the scenes and is used to build an animations array. The animations array
 (a series of operations) is then used to trigger DOM manipulation events that
 show the sorting algorithm in action. These events are nested within
 setTimeout bocks - set with increasing delays - which provide the impression
