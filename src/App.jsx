@@ -10,6 +10,7 @@ function App() {
   const [cancelAnimationTrigger, setCancelAnimationTrigger] = useState(false);
   const [bubbleSortTrigger, setBubbleSortTrigger] = useState(false);
   const [selectionSortTrigger, setSelectionSortTrigger] = useState(false);
+  const [insertionSortTrigger, setInsertionSortTrigger] = useState(false);
 
   return (
     <div className="App">
@@ -18,9 +19,10 @@ function App() {
         arraySize={arraySize}
         animationSpeedMS={animationSpeedMS}
         resetArrayTrigger={resetArrayTrigger}
+        cancelAnimationTrigger={cancelAnimationTrigger}
         bubbleSortTrigger={bubbleSortTrigger}
         selectionSortTrigger={selectionSortTrigger}
-        cancelAnimationTrigger={cancelAnimationTrigger}
+        insertionSortTrigger={insertionSortTrigger}
       />
 
       <SortingControls
@@ -37,7 +39,7 @@ function App() {
           state: resetArrayTrigger,
           setState: setResetArrayTrigger,
         }}
-        // Cancel animation
+        // Cancel animation button
         cancelAnimationButtonNameAndState={{
           buttonName: "Cancel Animation",
           state: cancelAnimationTrigger,
@@ -50,11 +52,17 @@ function App() {
           state: bubbleSortTrigger,
           setState: setBubbleSortTrigger,
         }}
-        // Trigger Bubble Sort Button
+        // Trigger Selection Sort Button
         selectionSortButtonNameAndState={{
           buttonName: "Selection Sort",
           state: selectionSortTrigger,
           setState: setSelectionSortTrigger,
+        }}
+        // Trigger Insertion Sort Button
+        insertionSortButtonNameAndState={{
+          buttonName: "Insertion Sort",
+          state: insertionSortTrigger,
+          setState: setInsertionSortTrigger,
         }}
       />
     </div>

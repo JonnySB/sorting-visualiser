@@ -5,14 +5,17 @@ import createBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/creat
 import playBubbleSortAnimations from "../../sortingAlgorithms/BubbleSort/playBubbleSortAnimations";
 import createSelectionSortAnimations from "../../sortingAlgorithms/SelectionSort/createSelectionSortAnimations";
 import playSelectionSortAnimations from "../../sortingAlgorithms/SelectionSort/playSelectionSortAnimations";
+import playInsertionSortAnimations from "../../sortingAlgorithms/InsertionSort/playInsertionSortAnimations";
+import createInsertionSortAnimations from "../../sortingAlgorithms/InsertionSort/createInsertionSortAnimations";
 
 const timeoutIds = [];
 
 const SortingVisualiser = (props) => {
   const hasPageBeenRendered = useRef({
+    cancelAnimation: false,
     bubbleSortEffect: false,
     selectionSortEffect: false,
-    cancelAnimation: false,
+    insertionSortEffect: false,
   });
   const [array, setArray] = useState([]);
 
@@ -65,6 +68,20 @@ const SortingVisualiser = (props) => {
     );
   };
 
+  // Get list of insertion sort animations and play them to the viewer
+  const triggerInsertionSortAnimations = () => {
+    const annimationsArray = createInsertionSortAnimations(array);
+    const arrayBars = document.getElementsByClassName("array-bar");
+    timeoutIds.push(
+      ...playInsertionSortAnimations(
+        annimationsArray,
+        arrayBars,
+        props.animationSpeedMS,
+        colours,
+      ),
+    );
+  };
+
   // Generate new array on page reload
   useEffect(() => {
     resetArray();
@@ -100,6 +117,14 @@ const SortingVisualiser = (props) => {
     }
     hasPageBeenRendered.current.selectionSortEffect = true;
   }, [props.selectionSortTrigger]);
+
+  // Trigger Insertion Sort:
+  useEffect(() => {
+    if (hasPageBeenRendered.current.insertionSortEffect) {
+      triggerInsertionSortAnimations();
+    }
+    hasPageBeenRendered.current.insertionSortEffect = true;
+  }, [props.insertionSortTrigger]);
 
   return (
     <div className="array-container">

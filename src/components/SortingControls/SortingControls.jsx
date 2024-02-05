@@ -34,6 +34,9 @@ const SortingControls = (props) => {
           <ButtonTrigger
             buttonNameAndState={props.selectionSortButtonNameAndState}
           />
+          <ButtonTrigger
+            buttonNameAndState={props.insertionSortButtonNameAndState}
+          />
         </div>
       </div>
     </div>
