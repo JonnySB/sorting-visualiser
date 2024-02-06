@@ -99,6 +99,7 @@ const SortingVisualiser = (props) => {
         arrayBars[i].style.backgroundColor = colours.BASE_COLOR_HEX;
       }
     }
+    resetArray();
     hasPageBeenRendered.current.cancelAnimation = true;
   }, [props.cancelAnimationTrigger]);
 
@@ -129,7 +130,9 @@ const SortingVisualiser = (props) => {
   return (
     <div className="array-container">
       {array.map((height, index) => {
-        return <ArrayBar height={height} index={index} />;
+        return (
+          <ArrayBar height={height} key={`array-bar-${index}`} index={index} />
+        );
       })}
     </div>
   );

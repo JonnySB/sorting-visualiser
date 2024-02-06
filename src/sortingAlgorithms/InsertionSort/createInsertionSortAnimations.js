@@ -1,35 +1,25 @@
 const createInsertionSortAnimations = (array) => {
   const animationsArray = [];
+  let i;
+  let key;
+  let j;
 
-  for (let i = 0; i < array.length - 1; i++) {
-    // reset unsearched array bars to base for current loop.
-    animationsArray.push(["reset", i]);
+  for (i = 1; i < array.length; i++) {
+    key = array[i];
+    j = i - 1;
 
-    let minIndex = i;
-    // set current min as green
-    animationsArray.push(["setStartMin", minIndex]);
-
-    for (let j = i + 1; j < array.length; j++) {
-      // make searched items red
-      animationsArray.push(["ticker", [j, minIndex]]);
-      if (array[j] < array[minIndex]) {
-        const oldMin = minIndex;
-        minIndex = j;
-        // change old min to red, and new min to green
-        animationsArray.push(["swapCurrentMins", [oldMin, minIndex]]);
-      } else {
-      }
+    while (j >= 0 && array[j] > key) {
+      let targetIdx = j + 1;
+      let value = array[j];
+      animationsArray.push(["setHeight", [targetIdx, value]]);
+      array[j + 1] = array[j];
+      j = j - 1;
     }
-    // swap heights
-    [array[i], array[minIndex]] = [array[minIndex], array[i]];
-    animationsArray.push(["swapMinHeight", [i, minIndex]]);
-    animationsArray.push(["pauseOnSorted", i]);
-    animationsArray.push(["pauseOnSorted", i]);
-    animationsArray.push(["pauseOnSorted", i]);
-    animationsArray.push(["setSortedColour", i]);
+    let targetIdx = j + 1;
+    let value = key;
+    animationsArray.push(["setHeight", [targetIdx, value]]);
+    array[j + 1] = key;
   }
-  animationsArray.push(["reset", 0]);
   return animationsArray;
 };
-
 export default createInsertionSortAnimations;
